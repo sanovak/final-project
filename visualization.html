@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Data Visualization</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            margin-top: 20px;
+        }
+
+        #chart {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+            width: 70%; /* Adjust this for desired width */
+            height: 400px; /* Increased height */
+        }
+
+        .tooltip {
+            position: absolute;
+            text-align: left;
+            width: auto;
+            height: auto;
+            padding: 8px;
+            font-size: 12px;
+            background: white;
+            border: 1px solid black;
+            border-radius: 4px;
+            pointer-events: none;
+            opacity: 0;
+        }
+
+        #controls {
+            margin: 20px 0;
+        }
+
+        #controls button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        #controls button:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <h1>College Data Visualization</h1>
+    <p>Explore the relationship between tuition costs and graduation rates for colleges.</p>
+
+    <div id="chart"></div>
+
+    <div id="controls">
+        <button id="showAll">Show All Colleges</button>
+        <button id="privateOnly">Private Colleges</button>
+        <button id="publicOnly">Public Colleges</button>
+    </div>
+    <!-- Navigation Links in the top right corner -->
+    <div class="nav">
+        <a href="documentation.html">Go to Documentation</a>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
